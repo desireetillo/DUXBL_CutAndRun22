@@ -21,4 +21,4 @@ done
 
 cd $wd
 
-#python Scripts/make_config.py --prefix TEST --template Templates/template_CutAndRunConfig.json --meta pairs.tab  --exp_type CutAndRun
+python Scripts/make_config.py --prefix TEST --template Templates/template_CutAndRunConfig.json --meta pairs.tab  --exp_type CutAndRun
