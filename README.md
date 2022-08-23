@@ -80,10 +80,10 @@ To submit the workflow on biowulf (NIH HPC):
     - fastp
     - kseq\_test (if grabbing from github, do chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl\_lib/*pl)
 
-    Trim sequences using `trimmomatic`
+    Trim sequences using `fastp`
 
     ```
-    java -jar $TRIMMOJAR PE -threads {threads} -phred33 {input.file1} {input.file2} R1.paired.fastq.gz R1.unpaired.fastq.gz R2.paired.fastq.gz R2.unpaired.fastq.gz ILLUMINACLIP:{params.fastawithadaptersetd}:2:15:4:4:true LEADING:20 TRAILING:20 SLIDINGWINDOW:4:15 MINLEN:25;
+    fastp --in1 R1.fastq.gz --in2 R2.fastq.gz --out1 R1.paired.fastq.gz --out2 R2.paired.fastq.gz --length_required 25 -w 8 -x -g 
     ```
 
     Then use another tool, `kseq` to  trim up to 6-bp adapters from the 3′ end of each read that was not effectively processed by fastp
