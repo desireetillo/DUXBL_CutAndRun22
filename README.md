@@ -30,7 +30,7 @@ A workflow to process Cut&Run data on the [NIH biowulf cluster](https://hpc.nih.
 
 There are a set set of utility scripts in the "Scripts/" directory.  If pulling from github, must run the following before running the pipeline:
 
-`chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl_lib/*pl`
+`chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl_lib/*pl Scripts/filterMetrics`
 
 
 Dependencies and paths to reference annotations and alignment indices are set in the file Templates/template_CutAndRunConfig.json and may be edited to suit your purposes.

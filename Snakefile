@@ -194,7 +194,7 @@ rule bam2bigwig_CutAndRun:
      threads:32
      shell:"""
         module load {params.deeptoolsver};
-        bamCoverage --bam {input.bam1} -o {output.bigwig1} --binSize 25 --smoothLength 75 --numberOfProcessors {threads} --normalizeUsing RPGC --centerReads --extendReads --ignoreForNormalization chrM' --effectiveGenomeSize {params.effgenome};
+        bamCoverage --bam {input.bam1} -o {output.bigwig1} --binSize 25 --smoothLength 75 --numberOfProcessors {threads} --normalizeUsing RPGC --centerReads --extendReads --ignoreForNormalization chrM --effectiveGenomeSize {params.effgenome};
         bamCoverage --bam {input.bam2} -o {output.bigwig2} --binSize 25 --smoothLength 75 --numberOfProcessors {threads} --normalizeUsing RPGC --centerReads --extendReads --ignoreForNormalization chrM --effectiveGenomeSize {params.effgenome};
         """
 
