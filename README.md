@@ -17,7 +17,7 @@ A workflow to process Cut&Run data on the [NIH biowulf cluster](https://hpc.nih.
 	macs/2.1.1.20160309  
 	multiqc/1.6  
 	preseq/2.0.3  
-	samtools/1.6  
+	samtools/1.1.0 
 	SEACR/1.3  
 	fastp/2.0.1
 	R/3.5  
