@@ -109,7 +109,7 @@ To submit the workflow on biowulf (NIH HPC):
 
     Tools:
 
-    - samtools/1.6
+    - samtools/1.10
     - filter_below.awk
 
     subset bamfiles into mm10 and E.coli alignments, compute stats using `samtools flagstat`
@@ -126,7 +126,7 @@ To submit the workflow on biowulf (NIH HPC):
 
 tools: 
 
-- deeptools/3.0.1
+- deeptools/3.3.0
 
 ```
 bamCoverage --bam {input.bam} -o {output.bigwig} --binSize 25 --smoothLength 75 --numberOfProcessors {threads} --normalizeUsing RPGC--centerReads --extendReads --ignoreForNormalization chrM --effectivegenomesize {effectivegenomesize};
